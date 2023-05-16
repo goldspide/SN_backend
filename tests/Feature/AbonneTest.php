@@ -22,8 +22,8 @@ class AbonneTest extends TestCase
         $response->assertStatus(200);
 
         //    // supression
-        //     $response = $this->withHeaders(["X-Header" => "value"])->delete('api/Abonne/5');
-        //     $response->assertStatus(200);
+            $response = $this->withHeaders(["X-Header" => "value"])->delete('api/Abonne/5');
+            $response->assertStatus(200);
 
         // Ajout
         $abonne = new Abonne();
