@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\REST\Abonne;
+use App\Http\Controllers\REST\AbonneController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('Abonne',Abonne::class);
 
+Route::apiResource('Abonne',AbonneController::class);

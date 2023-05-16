@@ -3,9 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use App\Models\Abonne;
-use App\Models\Abonnes;
 use App\Models\Motivation;
 use Illuminate\Database\Seeder;
 
@@ -24,6 +22,5 @@ class DatabaseSeeder extends Seeder
         // ]);
         Motivation::factory(40)->create();
         Abonne::factory(200)->create();
-
     }
 }

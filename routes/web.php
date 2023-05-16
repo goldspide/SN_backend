@@ -20,3 +20,7 @@ Route::get('/motivation',[App\Http\Controllers\MotivationController:: class,'mot
 Route::get('/liste_motivation',[App\Http\Controllers\MotivationController:: class,'create']);
 Route::get('/delete_motivation/{id}',[App\Http\Controllers\MotivationController:: class,'destroy']);
 Route::get('/update_motivation/{id}',[App\Http\Controllers\MotivationController:: class,'edite']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

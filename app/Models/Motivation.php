@@ -22,9 +22,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Motivation extends Model
 {
-
     use HasFactory;
-    protected $table = 'motivation';
+	protected $table = 'motivation';
 	public $timestamps = false;
 
 	protected $fillable = [

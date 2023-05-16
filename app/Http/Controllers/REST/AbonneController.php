@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Abonne;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use PHPUnit\Event\Code\Throwable;
 
 class AbonneController extends Controller
 {
@@ -15,10 +14,11 @@ class AbonneController extends Controller
      */
     public function index()
     {
-              //
-              $abonne = Abonne::all();
-              return response()->json($abonne, 201);
-          }
+        //
+        $abonne = Abonne::all();
+        return response()->json($abonne,200);
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -34,15 +34,14 @@ class AbonneController extends Controller
                 'sexe' => $request->sexe,
                 'ville' => $request->ville,
                 'rue' => $request->rue,
+                'id_motivation'=> $request->id_motivation,
                 'profession' => $request->profession,
-                'code postal' =>$ $request->codepostal,
+                'code_postal' => $request->code_postal,
                 'email' => $request->email,
-                'pay' => $request->pay,
+                'paye' => $request->paye,
                 'telephone' => $request->telephone,
             ]);
             DB::commit();
-
-
             return response()->json($participant, 200);
         } catch (\Throwable $th) {
             return response()->json('{"erreur": "impossible de sauvegarde"}', 405);
@@ -66,9 +65,7 @@ class AbonneController extends Controller
         try {
             //code...
             DB::beginTransaction();
-
             $Abonne = Abonne::find($id);
-
             $Abonne->update($request->all());
             DB::commit();
             return response()->json($Abonne, 200);
@@ -77,6 +74,7 @@ class AbonneController extends Controller
             return response()->json('erreur de mise a jour', 500);
         }
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -96,4 +94,5 @@ class AbonneController extends Controller
             return response()->json('erreur au niveau de la supression', 500);
         }
     }
+
 }

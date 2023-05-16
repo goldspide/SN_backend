@@ -23,13 +23,12 @@ return new class extends Migration
             $table->unsignedInteger('id_motivation');
             $table->foreign('id_motivation')->references('id')->on
             ('motivation')->onDelete('cascade');
-            $table->string('code postal',50);
+            $table->string('code_postal',50);
             $table->string('ville',50);
             $table->string('paye',50);
             $table->string('telephone',9)->nullable();
             $table->string('email',50);
         });
-
     }
 
     /**

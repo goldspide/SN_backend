@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Abonnes>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Abonne>
  */
-class AbonneFactory extends Factory
+class abonneFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -25,7 +25,7 @@ class AbonneFactory extends Factory
             'sexe'=> Str::upper(Str::random(1)),
             'profession'=> Str::upper(Str::random(9)),
             'rue'=> Str::upper(Str::random(9)),
-            'code postal' => Str::upper(Str::random(9)),
+            'code_postal' => Str::upper(Str::random(9)),
             'ville' => Str::upper(Str::random(9)),
             'paye'=> Str::upper(Str::random(9)),
             'telephone'=> rand(690000000,699999999),

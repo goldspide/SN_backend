@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $sexe
  * @property string $profession
  * @property int $id_motivation
- * @property string $code postal
+ * @property string $code_postal
  * @property string $ville
  * @property string $paye
  * @property string|null $telephone
@@ -49,7 +49,7 @@ class Abonne extends Model
 		'sexe',
 		'profession',
 		'id_motivation',
-		'code postal',
+		'code_postal',
 		'ville',
 		'paye',
 		'telephone',
